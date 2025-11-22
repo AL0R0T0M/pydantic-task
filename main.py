@@ -23,7 +23,7 @@ try:
     task3.update_deal(deal_id=0, data=Deal(**data3))
     task3.delete_deal(0)
     task3.create_deal(**data4)
-except Exception as e:
+except ValidationError as e:
     print(f'\nTask 3{'-'*30}\n\n    - Ошибка валидации Pydantic:')
     print(str(e))
     print(f'{'-'*36}')
